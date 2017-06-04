@@ -1,0 +1,64 @@
+@import 'normalize';
+@import 'libs';
+@import 'vars';
+@import 'fonts';
+
+body {
+	font-size: 16px;
+	min-width: 320px;
+	position: relative;
+	line-height: 1.75;
+	font-family: $default-font;
+	color: $default-color;
+	text-align: center;
+}
+
+ul {
+	margin: 0;
+	padding: 0;
+	li {
+		margin: 0 auto;
+		text-align: left;
+		list-style-type: none;
+		width: 300px;
+		padding: 10px;
+		background-color: #fdf9b0;
+		border: 1px solid #fdf9b7;
+		margin-bottom: 20px;
+		box-shadow: 5px 5px 18px -3px rgba(0,0,0,0.75);
+		border-radius: 4px;
+		.fa {
+			float: right;
+			font-size: 28px;
+			cursor: pointer;
+		}
+
+		#num {
+			color: $accent-color;
+			font-size: 12px;
+		}
+	}
+}
+
+.text {
+	width: 300px;
+	white-space: pre-line;
+}
+
+.button {
+	display: inline-block;
+	min-width: 110px;
+	margin: 15px 5px;
+	padding: 10px 12px 8px;
+	font: 700 12px/1 'Open Sans', sans-serif;
+	border-radius: 4px;
+	background-color: #fdf9b0;
+	cursor: pointer;
+}
+
+.sort-btn {
+	padding: 5px;
+	background-color: #fdf9F0;
+}
+
+// @import 'media';

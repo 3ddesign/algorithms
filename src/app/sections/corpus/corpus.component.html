@@ -1,0 +1,122 @@
+<main>
+  <div class="main-container">
+
+
+    <div class="main-header">
+
+      <h3>Manage corpora</h3>
+
+      <div class="search-controls">
+        <input type="text" placeholder="Search">
+        <img [matMenuTriggerFor]="menu" src="../../../assets/icons/filter-icon.svg" alt="filter list">
+      </div>
+      <md-menu #menu="matMenu">
+        <a class="filter-menu-item">Name</a>
+        <a class="filter-menu-item">Type</a>
+        <a class="filter-menu-item">Description</a>
+        <a class="filter-menu-item">Size</a>
+      </md-menu>
+
+    </div>
+
+
+    <div class="corp-list">
+      <div class="corp-list-header">
+        <span class="header-hm">Name
+          <img src="../../../assets/icons/arrow-up-icon.svg" class="sort-icon-up" alt="sort up">
+          <img src="../../../assets/icons/arrow-icon.svg" alt="sort down">
+        </span>
+        <span class="header-hm">Type
+         <img src="../../../assets/icons/arrow-up-icon.svg" class="sort-icon-up" alt="sort up">
+          <img src="../../../assets/icons/arrow-icon.svg" alt="sort down">
+        </span>
+        <span class="header-hm">Description
+         <img src="../../../assets/icons/arrow-up-icon.svg" class="sort-icon-up" alt="sort up">
+          <img src="../../../assets/icons/arrow-icon.svg" alt="sort down">
+        </span>
+        <span class="header-hm">Size
+         <img src="../../../assets/icons/arrow-up-icon.svg" class="sort-icon-up" alt="sort up">
+          <img src="../../../assets/icons/arrow-icon.svg" alt="sort down">
+        </span>
+      </div>
+
+      <div class="corp-item">
+        <div class="item-name">
+          <md-checkbox (change)="checkItem(item1)"></md-checkbox>
+          <div class="item-name-container">
+            <p>Fresh documents</p>
+            <span>Connect to 5 tasks</span>
+          </div>
+        </div>
+        <div class="item-type">
+          Liquor
+        </div>
+        <div class="item-action">
+          Some events that changed the face of the world
+        </div>
+        <div class="item-size">
+          24,567
+        </div>
+        <div class="item-edit-controls hidden" #item1>
+          <span><img src="../../../assets/icons/sum-icon.svg" alt="sum icon">Add to task</span>
+          <span><img src="../../../assets/icons/pencil-icon.svg" alt="pencil icon">Edit corpus</span>
+          <span><img src="../../../assets/icons/cancel-icon.svg" alt="pencil icon"></span>
+        </div>
+      </div>
+
+      <div class="corp-item">
+        <div class="item-name">
+          <md-checkbox (change)="checkItem(item2)"></md-checkbox>
+          <div class="item-name-container">
+            <p>Fresh documents</p>
+            <span>Connect to 5 tasks</span>
+          </div>
+        </div>
+        <div class="item-type">
+          Liquor
+        </div>
+        <div class="item-action">
+          Some events that changed the face of the world
+        </div>
+        <div class="item-size">
+          24,567
+        </div>
+        <div class="item-edit-controls hidden" #item2>
+          <span><img src="../../../assets/icons/sum-icon.svg" alt="sum icon">Add to task</span>
+          <span><img src="../../../assets/icons/pencil-icon.svg" alt="pencil icon">Edit corpus</span>
+          <span><img src="../../../assets/icons/cancel-icon.svg" alt="pencil icon"></span>
+        </div>
+      </div>
+
+      <div class="corp-item">
+        <div class="item-name">
+          <md-checkbox (change)="checkItem(item3)"></md-checkbox>
+          <div class="item-name-container">
+            <p>Fresh documents</p>
+            <span>Connect to 5 tasks</span>
+          </div>
+        </div>
+        <div class="item-type">
+          Liquor
+        </div>
+        <div class="item-action">
+          Some events that changed the face of the world
+        </div>
+        <div class="item-size">
+          24,567
+        </div>
+        <div class="item-edit-controls hidden" #item3>
+          <span><img src="../../../assets/icons/sum-icon.svg" alt="sum icon">Add to task</span>
+          <span><img src="../../../assets/icons/pencil-icon.svg" alt="pencil icon">Edit corpus</span>
+          <span><img src="../../../assets/icons/cancel-icon.svg" alt="pencil icon"></span>
+        </div>
+      </div>
+
+    </div>
+    <div class="list-footer">
+      <button>
+        Load more
+      </button>
+    </div>
+  </div>
+</main>

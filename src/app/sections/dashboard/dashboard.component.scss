@@ -1,0 +1,323 @@
+@import '../../../scss/app';
+
+h2 {
+  font-family: $Montserrat;
+  font-size: 32px;
+  font-weight: 300;
+  color: $main-color;
+}
+
+h6 {
+  margin: 10px 0px;
+  font-family: $Montserrat;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.71;
+  margin-bottom: 1px;
+}
+
+main {
+  background-color: $background-color;
+  overflow: hidden;
+  text-align: center;
+  padding: 20px;
+  .tasks-info {
+    margin-top: 20px;
+    margin-bottom: 30px;
+    ul {
+      font-family: $Montserrat;
+      li {
+        list-style: none;
+        display: inline-block;
+        margin-right: 50px;
+        p {
+          font-family: $OpenSans;
+          font-size: 13px;
+          font-weight: 300;
+          opacity: 0.6;
+          color: lighten($gray-color, 20);
+          margin-bottom: 4px;
+        }
+        span {
+          font-size: 18px;
+          font-weight: 500;
+          color: $gray-color;
+          font-family: $Montserrat;
+        }
+        hr {
+          width: 0;
+          border-right: none;
+          border-left: 1px solid #d7dbe8;
+          height: 31px;
+          position: absolute;
+          margin-top: -37px;
+          margin-left: -26px;
+        }
+      }
+    }
+  }
+
+  .main-container {
+    margin: 0 auto;
+    width: 1200px;
+    text-align: left;
+  }
+
+  .main-header {
+    display: grid;
+    grid-template-columns: 801px 161px;
+    .search-controls {
+      display: grid;
+      align-content: center;
+      padding-left: 15px;
+      grid-template-columns: 200px 50px 50px 50px 50px;
+      input {
+        width: 175px;
+        height: 28px;
+        border-radius: 6px;
+        border: solid 1px #d3d3d3;
+        background-image: url("../../../assets/icons/search-icon.svg");
+        background-repeat: no-repeat;
+        background-position: 159px 8px;
+        padding-left: 15px;
+        font-family: $OpenSans;
+        outline: none;
+      }
+      ::placeholder {
+        opacity: 0.6;
+        font-family: $OpenSans;
+        font-size: 14px;
+        font-weight: 300;
+        color: lighten($gray-color, 20);
+      }
+      img {
+        margin: -1px 10px;
+        cursor: pointer;
+      }
+    }
+  }
+
+  .taskListBlock{
+    display: grid;
+    padding: 0 15px;
+    grid-gap: $gutter;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+  .tasks-list {
+    border-radius: 10px;
+    background-color: #fff;
+    border: solid 1px #ececec;
+    width: 1200px;
+    .tasks-list-header {
+      font-family: $Montserrat;
+      font-size: 15px;
+      color: $main-color;
+      line-height: 1.6;
+      padding: 10px 16px;
+      display: grid;
+      grid-template-columns: 300px 1fr 1fr 1fr 1fr 300px;
+      .header-name {
+        width: 300px;
+        display: inline-block;
+      }
+      .header-hm {
+        display: inline-block;
+      }
+      .header-entitles {
+        width: 300px;
+        display: inline-block;
+      }
+    }
+
+    .taskItemList:nth-child(even) {
+      background-color: #f8f8fa;
+    }
+
+    .taskItemList {
+      height: 80px;
+      font-size: 14px;
+      font-weight: 500;
+      color: $gray-color;
+      padding: 10px 16px;
+      display: grid;
+      grid-template-columns: 300px 1fr 1fr 1fr 1fr 300px;
+      line-height: 7px;
+      p {
+        font-family: $OpenSans;
+        font-size: 10px;
+        font-weight: 300;
+        opacity: 0.6;
+        color: lighten($gray-color, 20);
+      }
+      span {
+        font-family: $OpenSans;
+        font-size: 12px;
+        font-weight: 300;
+        opacity: 0.6;
+        color: lighten($gray-color, 20);
+      }
+      .item-col {
+        display: grid;
+        align-content: center;
+      }
+      .entity {
+        margin-top: 27px;
+        display: inline-block;
+        border-radius: 8px;
+        padding: 8px;
+        border: solid 1px rgba(0, 0, 0, 0.3);
+        font-family: $OpenSans;
+        font-size: 14px;
+        font-weight: 300;
+        color: rgba(0, 0, 0, 0.3);
+        .color {
+          display: inline-block;
+          width: 9px;
+          height: 9px;
+          border-radius: 50%;
+          margin-right: 3px;
+          opacity: 1;
+        }
+        .c1 {
+          background-color: #50e3c2;
+        }
+        .c2 {
+          background-color: #c380ff;
+        }
+        .c3 {
+          background-color: #ff6174;
+        }
+        .c4 {
+          background-color: #b8e986;
+        }
+      }
+    }
+
+    .taskItemBlock {
+      margin: 13px auto;
+      height: 318px;
+      font-size: 14px;
+      font-weight: 500;
+      color: $gray-color;
+      padding: 10px 16px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      border: solid 1px #ececec;
+      border-radius: 4px;
+      line-height: 7px;
+      .item-col-name {
+        grid-column: 1/3;
+      }
+      .item-col-entity {
+        grid-column: 1/3;
+      }
+      p {
+        font-family: $OpenSans;
+        font-size: 10px;
+        font-weight: 300;
+        opacity: 0.6;
+        color: lighten($gray-color, 20);
+      }
+      span {
+        font-family: $OpenSans;
+        font-size: 12px;
+        font-weight: 300;
+        opacity: 0.6;
+        color: lighten($gray-color, 20);
+      }
+      .item-col {
+        display: grid;
+        align-content: center;
+      }
+    }
+    .entity {
+      margin-top: 8px;
+      display: inline-block;
+      border-radius: 8px;
+      padding: 8px;
+      border: solid 1px rgba(0, 0, 0, 0.3);
+      font-family: $OpenSans;
+      font-size: 14px;
+      font-weight: 300;
+      color: rgba(0, 0, 0, 0.3);
+      .color {
+        display: inline-block;
+        width: 9px;
+        height: 9px;
+        border-radius: 50%;
+        margin-right: 3px;
+        opacity: 1;
+      }
+      .c1 {
+        background-color: #50e3c2;
+      }
+      .c2 {
+        background-color: #c380ff;
+      }
+      .c3 {
+        background-color: #ff6174;
+      }
+      .c4 {
+        background-color: #b8e986;
+      }
+    }
+
+
+  }
+}
+
+.tasks-pagination {
+  margin-top: 30px;
+  margin-bottom: 80px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  button {
+    outline: none;
+    width: 120px;
+    height: 33.6px;
+    border-radius: 6px;
+    background-color: #fff;
+    border: solid 1px #d3d3d3;
+    display: inline-block;
+    font-family: $OpenSans;
+    color: $gray-color;
+    font-size: 14px;
+    font-weight: 300;
+    &:hover {
+      background-color: darken(#fff, 5);
+    }
+  }
+  .pagination {
+    font-family: $Montserrat;
+    text-align: right;
+    font-size: 16px;
+    font-weight: 500;
+    color: $gray-color;
+    .current-page {
+      opacity: 1;
+    }
+    span {
+      cursor: pointer;
+      margin: 0 10px;
+      opacity: 0.3;
+    }
+    img {
+      cursor: pointer;
+    }
+  }
+}
+
+.filter-menu-item {
+  font-family: $OpenSans;
+  font-size: 14px;
+  font-weight: 300;
+  color: $gray-color;
+  display: block;
+  text-decoration: none;
+  padding: 9px 16px;
+  cursor: pointer;
+  &:hover {
+    color: $main-color;
+    transition: color 0.5s ease;
+  }
+}

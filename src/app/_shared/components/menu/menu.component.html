@@ -1,0 +1,28 @@
+<header *ngIf="this.isAuthentificated">
+  <div class="header-container">
+    <img src="../../../../assets/logo.svg" alt="linalgo logo">
+    <nav>
+      <ul>
+        <li><a routerLinkActive="active" [routerLink]="['/dashboard']">Dashboard</a></li>
+        <li><a routerLinkActive="active" [routerLink]="['/tasks']">Tasks</a></li>
+        <li><a routerLinkActive="active" [routerLink]="['/corpora']">Corpora</a></li>
+        <li><a routerLinkActive="active" [routerLink]="['/entities']">Entities</a></li>
+        <li><a routerLinkActive="active" [routerLink]="['/annotators']">Annotators</a></li>
+      </ul>
+    </nav>
+
+    <div class="user-menu">
+      <button [matMenuTriggerFor]="menu" class="create-btn" >Create <img src="../../../../assets/icons/arrow-icon.svg" alt="down arrow"></button>
+      <md-menu #menu="matMenu">
+        <a class="create-menu-item" [routerLink]="['/create-task']">Create Task</a>
+        <a class="create-menu-item" [routerLink]="['/create-corpus']">Create Corpus</a>
+        <a class="create-menu-item" [routerLink]="['/create-entity']">Create Entity</a>
+      </md-menu>
+
+      <img [routerLink]="['/profile']" src="../../../../assets/icons/user-icon.svg" class="user-icon" alt="user icon">
+      <a [routerLink]="['/profile']" class="profile-btn">My profile</a>
+      <a [routerLink]="['/login']" class="logout-btn">Logout</a>
+    </div>
+
+  </div>
+</header>

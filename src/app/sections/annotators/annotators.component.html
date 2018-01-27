@@ -1,0 +1,137 @@
+<main>
+  <div class="main-container">
+
+
+    <div class="main-header">
+
+      <h3>Manage annotators</h3>
+
+      <div class="search-controls">
+        <input type="text" placeholder="Search">
+        <img [matMenuTriggerFor]="menu" src="../../../assets/icons/filter-icon.svg" alt="filter list">
+      </div>
+      <md-menu #menu="matMenu">
+        <a class="filter-menu-item">Name</a>
+        <a class="filter-menu-item">Domain</a>
+        <a class="filter-menu-item">Level</a>
+        <a class="filter-menu-item">Member since</a>
+      </md-menu>
+
+    </div>
+
+
+    <div class="annotators-list">
+      <div class="annotators-list-header">
+        <span class="header-hm">Name
+          <img src="../../../assets/icons/arrow-up-icon.svg" class="sort-icon-up" alt="sort up">
+          <img src="../../../assets/icons/arrow-icon.svg" alt="sort down">
+        </span>
+        <span class="header-hm">Domain
+         <img src="../../../assets/icons/arrow-up-icon.svg" class="sort-icon-up" alt="sort up">
+          <img src="../../../assets/icons/arrow-icon.svg" alt="sort down">
+        </span>
+        <span class="header-hm">Level
+         <img src="../../../assets/icons/arrow-up-icon.svg" class="sort-icon-up" alt="sort up">
+          <img src="../../../assets/icons/arrow-icon.svg" alt="sort down">
+        </span>
+        <span class="header-hm">Member since
+         <img src="../../../assets/icons/arrow-up-icon.svg" class="sort-icon-up" alt="sort up">
+          <img src="../../../assets/icons/arrow-icon.svg" alt="sort down">
+        </span>
+      </div>
+
+      <div class="annotators-item">
+        <div class="item-name">
+          <md-checkbox (change)="checkItem(item1)"></md-checkbox>
+          <img src="../../../assets/icons/user2-icon.svg" alt="user icon">
+          <div class="item-name-container">
+            <p>John Malkovich</p>
+            <span>Connect to 5 tasks</span>
+          </div>
+        </div>
+        <div class="item-domain">
+          Liquor
+        </div>
+        <div class="item-level">
+          <img src="../../../assets/icons/star-icon.svg" alt="user icon">
+          <div class="item-level-container">
+            <p>Super star</p>
+            <span>Document Annotated with 23 Revisions</span>
+          </div>
+        </div>
+        <div class="item-since">
+          Tue, Jan 2 2018
+        </div>
+        <div class="item-edit-controls hidden" #item1>
+          <span><img src="../../../assets/icons/sum-icon.svg" alt="sum icon">Add to task</span>
+          <span><img src="../../../assets/icons/pencil-icon.svg" alt="pencil icon">Edit annotator</span>
+          <span><img src="../../../assets/icons/cancel-icon.svg" alt="pencil icon"></span>
+        </div>
+      </div>
+
+      <div class="annotators-item">
+        <div class="item-name">
+          <md-checkbox (change)="checkItem(item2)"></md-checkbox>
+          <img src="../../../assets/icons/user2-icon.svg" alt="user icon">
+          <div class="item-name-container">
+            <p>John Malkovich</p>
+            <span>Connect to 5 tasks</span>
+          </div>
+        </div>
+        <div class="item-domain">
+          Liquor
+        </div>
+        <div class="item-level">
+          <img src="../../../assets/icons/star-icon.svg" alt="user icon">
+          <div class="item-level-container">
+            <p>Super star</p>
+            <span>Document Annotated with 23 Revisions</span>
+          </div>
+        </div>
+        <div class="item-since">
+          Tue, Jan 2 2018
+        </div>
+        <div class="item-edit-controls hidden" #item2>
+          <span><img src="../../../assets/icons/sum-icon.svg" alt="sum icon">Add to task</span>
+          <span><img src="../../../assets/icons/pencil-icon.svg" alt="pencil icon">Edit annotator</span>
+          <span><img src="../../../assets/icons/cancel-icon.svg" alt="pencil icon"></span>
+        </div>
+      </div>
+
+      <div class="annotators-item">
+        <div class="item-name">
+          <md-checkbox (change)="checkItem(item3)"></md-checkbox>
+          <img src="../../../assets/icons/user2-icon.svg" alt="user icon">
+          <div class="item-name-container">
+            <p>John Malkovich</p>
+            <span>Connect to 5 tasks</span>
+          </div>
+        </div>
+        <div class="item-domain">
+          Liquor
+        </div>
+        <div class="item-level">
+          <img src="../../../assets/icons/star-icon.svg" alt="user icon">
+          <div class="item-level-container">
+            <p>Super star</p>
+            <span>Document Annotated with 23 Revisions</span>
+          </div>
+        </div>
+        <div class="item-since">
+          Tue, Jan 2 2018
+        </div>
+        <div class="item-edit-controls hidden" #item3>
+          <span><img src="../../../assets/icons/sum-icon.svg" alt="sum icon">Add to task</span>
+          <span><img src="../../../assets/icons/pencil-icon.svg" alt="pencil icon">Edit annotator</span>
+          <span><img src="../../../assets/icons/cancel-icon.svg" alt="pencil icon"></span>
+        </div>
+      </div>
+
+    </div>
+    <div class="list-footer">
+      <button>
+        Load more
+      </button>
+    </div>
+  </div>
+</main>

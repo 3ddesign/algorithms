@@ -1,0 +1,184 @@
+<main>
+  <div class="main-container">
+    <h2>
+      Good morning Lucia! Annotators are on a roll
+    </h2>
+    <div class="tasks-info">
+      <ul>
+        <li>
+          <p>Tasks</p>
+          <span>11</span>
+        </li>
+        <li>
+          <p>Annotators</p>
+          <span>23</span>
+          <hr>
+        </li>
+        <li>
+          <p>Corpus</p>
+          <span>15</span>
+          <hr>
+        </li>
+        <li>
+          <p>Documents</p>
+          <span>345,345</span>
+          <hr>
+        </li>
+        <li>
+          <p>To review</p>
+          <span>3,456</span>
+          <hr>
+        </li>
+        <li>
+          <p>Completed</p>
+          <span>123,456</span>
+          <hr>
+        </li>
+        <li>
+          <p>Overall Accuracy</p>
+          <span>92.2%</span>
+          <hr>
+        </li>
+      </ul>
+    </div>
+
+    <div class="main-header">
+
+      <h3>Active Tasks</h3>
+
+      <div class="search-controls">
+        <input type="text" placeholder="Search">
+        <img (click)="changeView()" src="{{this.isViewBlock ? '../../../assets/icons/show-icon.svg' : '../../../assets/icons/show-icon-active.svg'}}" alt="show blocks">
+        <img (click)="changeView()" src="{{this.isViewBlock ? '../../../assets/icons/show2-icon-active.svg' : '../../../assets/icons/show2-icon.svg'}}" alt="show list">
+        <img [matMenuTriggerFor]="menu" src="../../../assets/icons/filter-icon.svg" alt="filter list">
+        <img src="../../../assets/icons/sort-icon.svg" alt="sort list">
+      </div>
+      <md-menu #menu="matMenu">
+        <a class="filter-menu-item">By Task</a>
+        <a class="filter-menu-item">By Entity</a>
+      </md-menu>
+
+    </div>
+
+    <div class="tasks-list {{this.isViewBlock  ? 'taskListBlock' : '' }}" >
+
+      <div class="tasks-list-header" *ngIf="!this.isViewBlock">
+        <span class="header-name">Task</span>
+        <span class="header-hm">Documents</span>
+        <span class="header-hm">To review</span>
+        <span class="header-hm">Completed</span>
+        <span class="header-hm">Annotators</span>
+        <span class="header-entitles">Entities</span>
+      </div>
+
+      <div class="{{ this.isViewBlock  ? 'taskItemBlock' : 'taskItemList'}}">
+        <div class="item-col-name">
+          <h6>Task name 3</h6>
+          <p>Created on 2 Jan 2018 | Last activity <b>4 min ago</b></p>
+          <span>This is a small description about this corpus.</span>
+        </div>
+        <div class="item-col">
+          <span *ngIf="this.isViewBlock">Documents</span>
+          <h6>24,654</h6>
+          <span>of Corpus Name</span>
+        </div>
+        <div class="item-col">
+          <span *ngIf="this.isViewBlock">To review</span>
+          <h6>345</h6>
+        </div>
+        <div class="item-col">
+          <span *ngIf="this.isViewBlock">Completed</span>
+          <h6>245</h6>
+        </div>
+        <div class="item-col">
+          <span *ngIf="this.isViewBlock">Annotators</span>
+          <h6>7</h6>
+        </div>
+        <span *ngIf="this.isViewBlock">Entities</span>
+        <div class="item-col-entity">
+          <div class="entity"><div class="color c1"></div>Date</div>
+          <div class="entity"><div class="color c2"></div>Account Num</div>
+          <div class="entity"><div class="color c3"></div>Entity name</div>
+        </div>
+      </div>
+
+      <div class="{{ this.isViewBlock  ? 'taskItemBlock' : 'taskItemList'}}">
+        <div class="item-col-name">
+          <h6>Task name 3</h6>
+          <p>Created on 2 Jan 2018 | Last activity <b>4 min ago</b></p>
+          <span>This is a small description about this corpus.</span>
+        </div>
+        <div class="item-col">
+          <span *ngIf="this.isViewBlock">Documents</span>
+          <h6>24,654</h6>
+          <span>of Corpus Name</span>
+        </div>
+        <div class="item-col">
+          <span *ngIf="this.isViewBlock">To review</span>
+          <h6>345</h6>
+        </div>
+        <div class="item-col">
+          <span *ngIf="this.isViewBlock">Completed</span>
+          <h6>245</h6>
+        </div>
+        <div class="item-col">
+          <span *ngIf="this.isViewBlock">Annotators</span>
+          <h6>7</h6>
+        </div>
+        <span *ngIf="this.isViewBlock">Entities</span>
+        <div class="item-col-entity">
+          <div class="entity"><div class="color c1"></div>Date</div>
+          <div class="entity"><div class="color c2"></div>Account Num</div>
+          <div class="entity"><div class="color c3"></div>Entity name</div>
+        </div>
+      </div>
+
+      <div class="{{ this.isViewBlock  ? 'taskItemBlock' : 'taskItemList'}}">
+        <div class="item-col-name">
+          <h6>Task name 3</h6>
+          <p>Created on 2 Jan 2018 | Last activity <b>4 min ago</b></p>
+          <span>This is a small description about this corpus.</span>
+        </div>
+        <div class="item-col">
+          <span *ngIf="this.isViewBlock">Documents</span>
+          <h6>24,654</h6>
+          <span>of Corpus Name</span>
+        </div>
+        <div class="item-col">
+          <span *ngIf="this.isViewBlock">To review</span>
+          <h6>345</h6>
+        </div>
+        <div class="item-col">
+          <span *ngIf="this.isViewBlock">Completed</span>
+          <h6>245</h6>
+        </div>
+        <div class="item-col">
+          <span *ngIf="this.isViewBlock">Annotators</span>
+          <h6>7</h6>
+        </div>
+        <span *ngIf="this.isViewBlock">Entities</span>
+        <div class="item-col-entity">
+          <div class="entity"><div class="color c1"></div>Date</div>
+          <div class="entity"><div class="color c2"></div>Account Num</div>
+          <div class="entity"><div class="color c3"></div>Entity name</div>
+        </div>
+      </div>
+
+
+    </div>
+
+    <div class="tasks-pagination">
+      <button>
+        See old tasks
+      </button>
+
+      <div class="pagination">
+        <img src="../../../assets/icons/arrow-left-icon.svg" alt="left arrow">
+        <span class="current-page">1</span>
+        <span>2</span>
+        <span>3</span>
+        <img src="../../../assets/icons/arrow-right-icon.svg" alt="right arrow">
+      </div>
+    </div>
+  </div>
+</main>

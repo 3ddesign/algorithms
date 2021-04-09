@@ -1,2 +1,1 @@
-# test2
-test2
+# Examples and descriptions of algorithms based on implementation with JS, from various courses

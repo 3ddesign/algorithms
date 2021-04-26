@@ -10,7 +10,7 @@ function fib(n) {
 console.log(fib(5));
 
 function isPrime(number) {
-    for (let i = 2; i < number; i++ ) {
+    for (let i = 2; i < Math.sqrt(number) ; i++ ) {
         console.log('iteration')
         if (number % i === 0) {
             return false;
@@ -20,8 +20,8 @@ function isPrime(number) {
 }
 
 // Best case: number = 1 OR number = 2; it will be 0(1)
-// Average case: 0(n)
-// Worst case: number = 1,000,0..; it will be 0(n)
+// Average case: 0(n) (Improved: 0(sqrt(n)))
+// Worst case: number = 1,000,0..; it will be 0(n) (Improved with Math.sqrt, it will be 0(sqrt(n)))
 
 console.log(isPrime(5));
 console.log(isPrime(9));

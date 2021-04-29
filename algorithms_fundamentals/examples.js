@@ -36,6 +36,7 @@ function isPowerOfTwo(number) {
     }
     let devidedNumber = number;
     while (devidedNumber !== 1) {
+        console.log('loop execuiting');
         if (devidedNumber % 2 !== 0) {
             return false;
         }
@@ -43,6 +44,18 @@ function isPowerOfTwo(number) {
     }
     return true;
 } 
+
+// Reduce TC to 0(1): 
+// function isPowerOfTwo(number) {
+//     if (number < 1) {
+//         return false;
+//     }
+//     return (number & (number -1)) === 0;
+// } 
+
+// Best case: number = 13 => 0(1)
+// Average case: 0(log n)
+// Worst case: 1,223,232,123,444 => 0(log n)
 
 console.log(isPowerOfTwo(8));
 console.log(isPowerOfTwo(5));

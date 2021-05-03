@@ -74,3 +74,17 @@ function fact(number) {
 
 console.log(fact(3));
 console.log(fact(4));
+
+/* Example 4 with recursion */ 
+
+function fact(number) {
+    if (number === 1) {
+        return 1;
+    }
+    return number * fact(number -1);
+}
+
+// 0(n)
+
+console.log(fact(3));
+console.log(fact(4));

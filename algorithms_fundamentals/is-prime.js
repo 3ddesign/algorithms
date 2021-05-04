@@ -9,6 +9,32 @@ function fib(n) {
 
 console.log(fib(5));
 
+
+// Example fib() with recursion (+ dynamic programming):
+
+function fibRec(n, memo) {
+    let result;
+    if (memo[n]) {
+        return memo[n];
+    }
+
+    if (n === 0 || n === 1) {
+        return 1;
+    } else {
+        result = fibRec(n - 1, memo) + fibRec(n - 2, memo);
+    }
+    memo[n] = result;
+    return result;
+}
+
+// TC: O(1)
+
+
+console.log(fibRec(5, {}));
+
+
+
+
 function isPrime(number) {
     for (let i = 2; i < Math.sqrt(number) ; i++ ) {
         console.log('iteration')

@@ -33,8 +33,6 @@ function fibRec(n, memo) {
 console.log(fibRec(5, {}));
 
 
-
-
 function isPrime(number) {
     for (let i = 2; i < Math.sqrt(number) ; i++ ) {
         console.log('iteration')

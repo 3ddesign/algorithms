@@ -63,3 +63,8 @@ function findElementBinary(sortedArray, element) {
 const arr = [1, 5, 9, 13, 99, 100];
 
 console.log(findElement(arr, 9));
+
+// Best case: O(1)
+// Worst case: O(log n)
+// Average case: O(log n)
+

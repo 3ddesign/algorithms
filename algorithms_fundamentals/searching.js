@@ -68,3 +68,28 @@ console.log(findElement(arr, 9));
 // Worst case: O(log n)
 // Average case: O(log n)
 
+
+/* Example 1: Binary search with recusion */
+
+function findElementBinaryWithRecustion(sortedArray, element, offset) {
+  let startIndex = 0;
+  let endIndex = sortedArray.length - 1;
+
+    const middleIndex = Math.floor((endIndex - startIndex) / 2);
+
+    if (element === sortedArray[middleIndex]) {
+      return middleIndex + offset;
+    }
+
+    if (sortedArray[middleIndex] < element) {
+      startIndex = middleIndex + 1;
+      offset = offset + middleIndex + 1;
+    } else {
+      endIndex = middleIndex;
+    }
+    return findElementBinaryWithRecustion(sortedArray.slice(startIndex, endIndex + 1), element, offset);
+}
+
+const arr2 = [1, 5, 9, 13, 99, 100];
+
+console.log(findElementBinaryWithRecustion(arr2, 99, 0));

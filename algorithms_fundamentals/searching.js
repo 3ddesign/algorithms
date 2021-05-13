@@ -72,6 +72,7 @@ console.log(findElement(arr, 9));
 /* Example 1: Binary search with recusion */
 
 function findElementBinaryWithRecustion(sortedArray, element, offset) {
+  // O(1):
   let startIndex = 0;
   let endIndex = sortedArray.length - 1;
 
@@ -87,8 +88,14 @@ function findElementBinaryWithRecustion(sortedArray, element, offset) {
     } else {
       endIndex = middleIndex;
     }
+    // O(1):
     return findElementBinaryWithRecustion(sortedArray.slice(startIndex, endIndex + 1), element, offset);
 }
+
+// a = 1
+// b = 2
+// O(n^logb a) =>  O(n^log2 1) => O(1)
+// Overall TC:  O(n^logb a * log n) => O(1 * log n) => O(log n)
 
 const arr2 = [1, 5, 9, 13, 99, 100];
 

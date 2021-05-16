@@ -59,6 +59,8 @@ function quicksort(array) {
     return smallerElementsSortedArray.concat(centerElemetsArray, biggerElementsSortedArray);
 }
 
-
+// Recursive step runtime: O(n^logb(a)) => O(n^log(2)) => O(n^1) => O(n)
+// Runtime outside: O(n)
+// Algorithm runtime: O(n^logb(a) * log n) => O(n * log n)
 
 console.log(quicksort([3, 9, -3, 20, 1, 33]));

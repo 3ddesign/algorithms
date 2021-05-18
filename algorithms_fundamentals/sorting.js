@@ -104,4 +104,8 @@ function mergeSort(array) {
     return mergedArray;
 }
 
+// Recursive step TC: O(n^logb(a)) => O(n^log2(2)) => O(n^1) => O(n)
+// TC outside of the recursion: O(n)
+// Algorithm runtime: O(n^logb(2) * log n) => O(n * log n)
+
 console.log(mergeSort([3, 9, -3, 20, 1, 33]));

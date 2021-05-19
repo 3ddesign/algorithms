@@ -70,7 +70,8 @@ function fact(number) {
     return result;
 }
 
-// 0(n)
+// Time complexity: 0(n)
+// Space complexity: 0(1)
 
 console.log(fact(3));
 console.log(fact(4));
@@ -84,7 +85,8 @@ function fact(number) {
     return number * fact(number -1);
 }
 
-// 0(n)
+// Time complexity: 0(n)
+// Space complexity: 0(n)
 
 console.log(fact(3));
 console.log(fact(4));

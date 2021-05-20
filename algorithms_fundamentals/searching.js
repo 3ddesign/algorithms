@@ -34,9 +34,11 @@ function findElement(array, element, comparatorFunction) {
     })
   );
   
-// Best case: O(1)
-// Average case: O(n)
-// Worst case: O(n)
+// Best case TC: O(1)
+// Average case TC: O(n)
+// Worst case TC: O(n)
+
+// Space complexity: 0(1)
 
 
 /* Example 1: Binary search */

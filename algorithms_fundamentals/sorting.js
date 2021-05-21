@@ -27,6 +27,7 @@ console.log(bubleSort([3, 9, -3, 20, 1, 33]));
 // Best case: O(n)
 // Average case: O(n^2)
 // Worst case: O(n^2)
+// Space complexity: 0(1)
 
 /* Example 2: Quicksort */
 

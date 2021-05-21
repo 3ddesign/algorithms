@@ -37,7 +37,6 @@ function findElement(array, element, comparatorFunction) {
 // Best case TC: O(1)
 // Average case TC: O(n)
 // Worst case TC: O(n)
-
 // Space complexity: 0(1)
 
 
@@ -69,7 +68,7 @@ console.log(findElement(arr, 9));
 // Best case: O(1)
 // Worst case: O(log n)
 // Average case: O(log n)
-
+// Space complexity: 0(1)
 
 /* Example 1: Binary search with recusion */
 

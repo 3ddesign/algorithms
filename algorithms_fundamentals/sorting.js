@@ -63,6 +63,7 @@ function quicksort(array) {
 // Recursive step runtime: O(n^logb(a)) => O(n^log(2)) => O(n^1) => O(n)
 // Runtime outside: O(n)
 // Algorithm runtime: O(n^logb(a) * log n) => O(n * log n)
+// Space complexity: 0(n)
 
 console.log(quicksort([3, 9, -3, 20, 1, 33]));
 
@@ -108,5 +109,6 @@ function mergeSort(array) {
 // Recursive step TC: O(n^logb(a)) => O(n^log2(2)) => O(n^1) => O(n)
 // TC outside of the recursion: O(n)
 // Algorithm runtime: O(n^logb(2) * log n) => O(n * log n)
+// Space complexity: 0(n)
 
 console.log(mergeSort([3, 9, -3, 20, 1, 33]));

@@ -15,3 +15,6 @@ function cartProduct(setA, setB) {
 const colors = ['blue', 'red'];
 const sizes = ['m', 'l'];
 console.log(cartProduct(colors, sizes));
+
+// Time Complexity: O(n*m), O(n^2)
+// Space Complexity: O(n*m), O(n^2)

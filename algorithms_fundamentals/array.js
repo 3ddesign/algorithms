@@ -33,8 +33,8 @@ console.log(cartesian(colors, sizes, styles));
 // Time Complexity: O(n^x)
 // Space Complexity: O(n^x)
 
+/* Example 2: Permutations without Repetitions */
 
-// Permutations without Repetitions:
 function getPermutations(options) {
     const permutations = [];
   
@@ -67,9 +67,9 @@ function getPermutations(options) {
     'walk the dog',
     'clean the toilet',
     'buy groceries',
-    'order food',
-    'do homework'
+    'order food'
   ];
   
   console.log(getPermutations(todoListItems));
   
+  // Time Complexity: O(n!) (for example: 4 * 3 * 2 * 1 = 24 or 5 * 4 * 3 * 2 * 1 = 120)

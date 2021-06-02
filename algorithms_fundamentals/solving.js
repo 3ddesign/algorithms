@@ -1,37 +1,42 @@
 /* Example 1: Knapsack Problem solution */
 
-function getPermutations(options) {
-    const permutations = [];
-  
-    if (options.length === 1) {
-      return [options];
-    }
-  
-    const partialPermutations = getPermutations(options.slice(1));
-  
-    console.log(partialPermutations);
-  
-    const firstOption = options[0];
-  
-    for (let i = 0; i < partialPermutations.length; i++) {
-      const partialPermutation = partialPermutations[i];
-  
-      for (let j = 0; j <= partialPermutation.length; j++) {
-        const permutationInFront = partialPermutation.slice(0, j);
-        const permutationAfter = partialPermutation.slice(j);
-        permutations.push(
-          permutationInFront.concat([firstOption], permutationAfter)
-        );
-      }
-    }
-  
-    return permutations;
+function knapsack(items, cap, itemIndex) {
+  if (cap === 0 || itemIndex < 0) {
+    return { items: [], value: 0, weight: 0 };
   }
-  
+  if (cap < items[itemIndex].weight) {
+    return knapsack(items, cap, itemIndex - 1);
+  }
+  const sackWithItem = knapsack(
+    items,
+    cap - items[itemIndex].weight,
+    itemIndex - 1
+  );
+  const sackWithoutItem = knapsack(items, cap, itemIndex - 1);
+
+  const valueWithItem = sackWithItem.value + items[itemIndex].value;
+  const valueWithoutItem = sackWithoutItem.value;
+
+  if (valueWithItem > valueWithoutItem) {
+    const updatedSack = {
+      items: sackWithItem.items.concat(items[itemIndex]),
+      value: sackWithItem.value + items[itemIndex].value,
+      weight: sackWithItem.weight + items[itemIndex].weight,
+    };
+    return updatedSack;
+  } else {
+    return sackWithoutItem;
+  }
+}
+
   const todoListItems = [
     { name: 'a', value: 3, weight: 3},
-    { name: 'b', value: 6, weight: 8},
+    { name: 'b', value: 6, weight: 8 },
     { name: 'c', value: 9, weight: 3},
   ];
+  const maxCap = 8;
+
+  const sack = knapsack(items, maxCap, items.length - 1);
+  console.log(sack);
   
-  console.log(getPermutations(todoListItems));
+  

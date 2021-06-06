@@ -87,3 +87,24 @@ const maxCap = 8;
 
 const sack = knapsack(items, maxCap);
 console.log(sack);
+
+
+/* Example 4: Greedy change making algorithm */
+
+function computeChange(coins, amount) {
+  let remainingAmount = amount;
+
+  const calculatedChange = {
+    selectedCoins: {},
+    numberOfCoins: 0,
+  };
+
+  for (const coin of coins) {
+    const count = Math.floor(remainingAmount / coin);
+    calculatedChange[coin] = count;
+    calculatedChange.numberOfCoins += count;
+    remainingAmount = remainingAmount - coin * count;
+  }
+
+  return calculatedChange;
+}
